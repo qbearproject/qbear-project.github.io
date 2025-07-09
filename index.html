@@ -213,6 +213,38 @@
             color: var(--accent-color);
         }
         
+        .dropdown {
+            position: relative;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: var(--dark-bg);
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 5px;
+            padding: 10px 0;
+        }
+        
+        .dropdown-content a {
+            color: var(--secondary-color);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: var(--transition);
+        }
+        
+        .dropdown-content a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--accent-color);
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
         .mobile-toggle {
             display: none;
             background: none;
@@ -835,7 +867,13 @@
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li class="dropdown">
+                    <a href="#projects" class="dropdown-btn">Projects</a>
+                    <div class="dropdown-content">
+                        <a href="#projects">Research Files</a>
+                        <a href="https://theqbearproject-ca.streamlit.app/">QBear Screener</a>
+                    </div>
+                </li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             
@@ -1025,16 +1063,6 @@
                         </div>
                     </div>
                     
-                    <!--<div class="contact-method">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Visit Us</h4>
-                            <p>Quantitative Research Lab<br>University Innovation Center</p>-->
-                        </div>
-                    </div>
-                    
                     <div class="contact-method">
                         <div class="contact-icon">
                             <i class="fas fa-share-alt"></i>
@@ -1045,36 +1073,10 @@
                             <div class="social-links">
                                 <a href="https://www.linkedin.com/company/qbear"><i class="fab fa-linkedin-in"></i></a>
                                 <a href="https://medium.com/@qbearproject"><i class="fab fa-medium-m"></i></a>
-                                <!--<a href="#"><i class="fab fa-github"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>-->
                             </div>
                         </div>
                     </div>
                 </div>
-                <!--
-                <div class="contact-form">
-                    <form>
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Your Message</label>
-                            <textarea id="message" required></textarea>
-                        </div>
-                        <div class="form-group">
-                            <button type="submit">Send Message</button>
-                        </div>
-                    </form>
-                </div>-->
             </div>
         </div>
     </section>
@@ -1094,7 +1096,12 @@
                     <ul class="footer-links">
                         <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
                         <li><a href="#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
-                        <li><a href="#projects"><i class="fas fa-chevron-right"></i> Projects</a></li>
+                        <li class="dropdown">
+                            <a href="#projects"><i class="fas fa-chevron-right"></i> Projects</a>
+                            <div class="dropdown-content">
+                                <a href="https://your-screener-page-link">QBear Screener</a>
+                            </div>
+                        </li>
                         <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
                     </ul>
                 </div>
@@ -1115,7 +1122,6 @@
                         <li><a href="mailto:qbearproject@yahoo.com"><i class="fas fa-envelope"></i> qbearproject@yahoo.com</a></li>
                         <li><a href="https://www.linkedin.com/company/qbear"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
                         <li><a href="https://medium.com/@qbearproject"><i class="fab fa-medium"></i> Medium</a></li>
-                        <!--<li><a href="#"><i class="fab fa-github"></i> GitHub</a></li>-->
                     </ul>
                 </div>
             </div>
